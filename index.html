@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Finanças</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Finanças</h1>
+    </header>
+    <main>
+        <section id="entrada-formulario">
+            <h2>Adicionar Transação</h2>
+            <form id="transacao-form">
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" required>
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" step="0.01" required>
+                <label for="data">Data:</label>
+                <input type="date" id="data" required>
+                <label for="tipo">Tipo:</label>
+                <select id="tipo">
+                    <option value="receita">Receita</option>
+                    <option value="despesa">Despesa</option>
+                </select>
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+        <section id="resumo">
+            <h2>Resumo Financeiro</h2>
+            <div id="total-receitas">
+                <h3>Total Receitas: R$ <span id="total-receita">0.00</span></h3>
+            </div>
+            <div id="total-despesas">
+                <h3>Total Despesas: R$ <span id="total-despesa">0.00</span></h3>
+            </div>
+            <div id="saldo">
+                <h3>Saldo: R$ <span id="saldo">0.00</span></h3>
+            </div>
+        </section>
+        <section id="transacoes">
+            <h2>Lista de Transações</h2>
+            <ul id="transacoes-lista"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
